@@ -26,7 +26,8 @@ export default function HeroSection() {
                 </HeroP>
                 <HeroBtnWrapper>
                     <Button to={"signup"} onMouseEnter={onHover} onMouseLeave={onHover}
-                    primary={true.toString()} dark={true.toString()}>
+                    primary={true.toString()} dark={true.toString()}
+                    smooth={true} duration={500} spy={true} exact={true} offset={-80}>
                         Get started { hover ? <ArrowForward /> : <ArrowRight />}
                     </Button>
                 </HeroBtnWrapper>

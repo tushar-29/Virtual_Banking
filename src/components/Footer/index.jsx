@@ -5,12 +5,16 @@ import {
     SocialLogo, SocialMedia, SocialMediaWrapper, SocialRights
 } from "./FooterElements";
 import {FaFacebook,FaInstagram,FaTwitter, FaYoutube} from "react-icons/fa";
-import {AiFillMail} from "react-icons/ai";
+import {AiFillMail} from "react-icons/ai"
+    import {animateScroll} from "react-scroll";
 
 
 export default function Footer() {
 
     const year = new Date().getFullYear();
+    const toggleHome = () => {
+        animateScroll.scrollToTop();
+    }
     
     return(
         <FooterContainer>
@@ -57,7 +61,7 @@ export default function Footer() {
 
                 <SocialMedia>
                     <SocialMediaWrapper>
-                        <SocialLogo to={'/'}>dolla</SocialLogo>
+                        <SocialLogo to={'/'} onClick={toggleHome}>dolla</SocialLogo>
                         <SocialRights>dolla © {year} All rights reserved.</SocialRights>
                         <SocialIcons>
                             <SocialIconLink herf={"/"} target={'_blank'} arial-label={"Facebook"}>
